@@ -1,0 +1,52 @@
+Q<-matrix(11:30,ncol=5,nrow=4)
+Q
+W<-c("toluca","PACHUCA","GDL","MONTERREY")
+E<-c("escuela1","escuela2","escuela3","escuela4","escuela5")
+row.names(Q)<-W
+colnames(Q)<-E
+Q
+Q["toluca","escuela3"]
+Q["GDL","escuela5"]
+Q["PACHUCA","escuela1"]
+
+######2
+A<-matrix(1:18,ncol=3, nrow = 6)
+A
+A[3,3]
+
+#####3
+S<-matrix(1:9,nrow = 3)
+S
+S[,2]*S[,1]
+
+#####4
+a<-c("pequeño","largo","enorme")
+b<-a!="largo"
+b
+a[a=!!b]
+
+#####5
+fac<-c("medicina","Adm.Y Cont.","Derecho","Economia")
+lic<-c("act","rei","nif","Eco")
+calalumnos<-c(9,10,8.5,7)
+esc<-data.frame(fac,lic,calalumnos)
+class(fac)
+class(lic)
+class(calalumnos)
+esc<-esc[-3,]
+esc
+
+
+#####6
+
+nom<-c("carlos","juan","raquel","paty")
+edad<-c(32,35,43,25)
+sitcony<-c("casado","soltero","union" ,"libre")
+segsocial<-c("IMSS","IMSS","ISSSTE","PRIVADO")
+ocupa<-c("Contador","Carpintero","Profesora","Diseñador")
+generales<- data.frame(segsocial,nom,edad,sitcony,ocupa)
+generales
+ocupa[c(2,4)]
+segsocial[c(1,3)]
+sitcony[c(2,4)]
+sum(pares$edad)
