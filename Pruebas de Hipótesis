@@ -1,0 +1,31 @@
+#EJEMPLO 1
+x<-c(42.2, 42.6, 43.3, 43.5, 43.7, 44.1, 44.9, 45.3, 45.7,45.7,45.9,46,46.2,46.2,46.8,46.8,47.1,47.2)
+y<-c(44,44,44,45,45,46,46,46,47,48,48,48,47,48,48,49,49,49)
+mod1<-lm(y~x)#planteamos el modelo 1
+summary(mod1)#resumen de mi modelo, aparecen varios elemntos(las betas,desviacion estandar(s de b1 gorrito),error, p value)
+#entre mas cercanos a 0 mas significativo
+anova(mod1)#si mi x tiene la misma significativa 
+show(mod1)
+names(mod1)
+
+#Ejercicio1
+x1<-c(635,644,711,708,836,820,810,870,856,923,878,937,948)
+y1<-c(100,93,88,84,77,75,74,63,57,55,47,43,38)
+mod3<-lm(y1~x1)
+summary(mod3)
+anova(mod3)
+qt(.025,11)#valor en ntablas, 95% de confianza , es .05 entre 2 =.025
+-0.17563+(-2.200985*.01837)
+-0.17563-(-2.200985*.01837)
+
+#Ejercicio 2
+x2<-c(5,12,14,17,23,30,40,47,55,67,72,81,96,112,127)#volumen precipitación
+y2<-c(4,10,13,15,15,25,27,46,38,46,53,70,82,99,100)#volumen escurrimiento
+mod2<-lm(y2~x2)
+summary(mod2)
+qt(.025,13)# -2.160369
+0.82697 +(-2.160369* 0.03652)# 0.7480733
+0.82697 -(-2.160369* 0.03652)# 0.9058667
+#existe una relacion util entre la precipitación y el escurriemiento, r= el valor del estadistico es 7.896e-12 por lo tanto es menor a .05, por lo cual se rechaza la hipotesis nula
+#y aceptamos la hipotesis altrnativa, el modelo explica un 97.34% 
+#calcule C.I con 95% he interprete, el cambio en el volumen de escurrimiento  oscila entre .7480764 y .9058698 
